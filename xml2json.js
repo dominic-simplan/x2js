@@ -332,7 +332,7 @@
 		}
 		
 		function endTag(jsonObj,elementName) {
-			return "</"+ (jsonObj.__prefix!=null? (jsonObj.__prefix+":"):"")+elementName+">";
+			return "</"+ ((jsonObj!=null && jsonObj.__prefix!=null) ? (jsonObj.__prefix+":"):"")+elementName+">";
 		}
 		
 		function endsWith(str, suffix) {
